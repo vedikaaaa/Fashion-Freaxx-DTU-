@@ -1,2 +1,2 @@
-# Fashion-Freaxx-DTU-
-An ultimate solution to collaborative shopping Using
+# FashionFeed
+HackerRamp feed using MERN

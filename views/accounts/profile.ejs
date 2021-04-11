@@ -1,0 +1,117 @@
+<% layout('layout') -%>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+
+    </div>
+  </div>
+</div>
+
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+          <div class="col m4">
+            <div  class="col s12">
+                <h2 class="center header text_h2"><span class="span_h2"> User Profile</span></h2>
+            </div>
+
+            <div class="col s12">
+              <img class="img-circle img-responsive img-center" src="<%= user.picture %>" alt="">
+
+              <br />
+              <p>Name: <%= user.name %></p>
+              <p>Email: <%= user.email %></p>
+
+              <% if (user.rollno === "" || typeof user.rollno === 'undefined')  { %>
+                <p>Membership no: <span style="color: #c0392b; font-weight: bold">You have not specified membership yet</span></p>
+
+              <% } else { %>
+
+              <p>Membership no: <%= user.rollno %></p>
+
+              <% } %>
+
+              <% if (user.year === 0 || typeof user.year === 'undefined')  { %>
+                <p>Year: <span style="color: #c0392b; font-weight: bold">You have not specified year yet</span></p>
+
+              <% } else { %>
+
+              <p>Year: <%= user.year %></p>
+
+              <% } %>
+
+
+              <% if (user.scholar === "" || typeof user.scholar === 'undefined')  { %>
+                <p>Residency: <span style="color: #c0392b; font-weight: bold">You have not specified residency yet</span></p>
+
+              <% } else { %>
+
+              <p>Residency: <%= user.scholar %></p>
+
+              <% } %>
+
+              <% if (user.totalHours === 0 || typeof user.totalHours === 'undefined')  { %>
+                <p>Time on Myntra: <span style="color: #c0392b; font-weight: bold">Status Pending</span></p>
+              <% } else { %>
+
+              <p>Time on Myntra: <%= user.totalHours %></p>
+
+              <% } %>
+
+              <ul class="collection">
+                <li class="collection-item center"><a class="waves-effect waves-light btn" href="/edit-profile">Edit Your Profile</a>
+                </li>
+                <li class="collection-item center"><a class="waves-effect waves-light btn" href="/change-password">Change Password</a>
+                </li>
+              </ul>
+
+
+
+            </div>
+          </div>
+          <div class="col m8">
+            <div  class="col s12">
+                <h2 class="center header text_h2"><span class="span_h2"> Hours Record</span></h2>
+            </div>
+            <div class="col s12">
+              <table class="bordered highlight centered responsive">
+                  <thead>
+                    <tr>
+                        <th data-field="id">Event Name</th>
+                        <th data-field="name">Event Date</th>
+                        <th data-field="price">Products Bought</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <%
+                    if(user.eventsRecord)
+                    {
+                        for(var i=0;i < user.eventsRecord.length;i++)
+                        {
+                          %>
+                          <tr>
+                            <td><%= user.eventsRecord[i].eventName %></td>
+                            <td><%= user.eventsRecord[i].eventDate %></td>
+                            <td><%= user.eventsRecord[i].eventHours %></td>
+                          </tr>
+                          <%
+                        }
+                    }
+                    else{
+
+                    }
+
+                    %>
+
+
+                  </tbody>
+                </table>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<% layout('layout') -%>
+    <!--Intro and service-->
+    <div class="container">
+        <div class="row">
+            <div class="col l9 m12 s12">
+                <div id="intro" class="section scrollspy">
+                    <div class="container">
+                        <div class="row card-panel">
+                            <div class="col s12">
+
+                                <!-- <h3 class="center header text_h2"><span class="span_h2"><%= Title %></span></h3> -->
+                            </div>
+
+                        </div>
+                        <% const monthNames = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
+]; 
+%>
+
+
+                            <% for(var i=0; i < events.length; i++) { %>
+                                <div class="row l6 card-panel center">
+                                    <div class="col s12 left">
+                                        <h4 class="header">
+                                            <%= events[i].name %>
+                                        </h4>
+                                        <% const d= events[i].date%>
+                                            <% if(d!=null){%>
+                                                <h6>
+                                                    <%= d.getDate() +" "+ monthNames[d.getMonth()] +" "+ d.getFullYear() %>
+                                                </h6>
+                                                <%}%>
+                                                    <!-- <p id="<%=events[i]._id %>" class="light"><%= events[i].paragraph%></p> -->
+                                                    <a class="waves-effect waves-light btn center" href="/event/<%= events[i]._id %>">Read More</a>
+                                                    <!-- <script>
+                var content = "<%=events[i].content%>";
+                //var finalContent = content.substr(0,100);
+                var finalContent = content.split('.')[0] + '.';
+                document.getElementById('<%= events[i]._id%>').innerHTML = finalContent;
+              </script> -->
+                                    </div>
+                                </div>
+
+                                <% } %>
+                                    <% if (events.length==0) { %>
+                                        <div class="row card-panel">
+                                            <div class="col s12 left">
+                                                <div style="border-radius: 5vw;" class="row content">
+                                                    <svg viewBox="0 0 960 300">
+                  <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="50%">404</text>
+                  </symbol>
+                
+                  <g class = "g-ants">
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                    <use xlink:href="#s-text" class="text"></use>
+                  </g>
+                </svg>
+                                                </div>
+                                                <div class="row">
+                                                    <h5 style="text-align: center;font-weight: 100;color: rgb(226, 4, 4);">None found right now.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m12 s12">
+                <%include ../partials/sidebar %>
+            </div>
+        </div>
+    </div>
