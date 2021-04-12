@@ -7,11 +7,11 @@ We generated REST APIs with Express and then used these endpoints in the fronten
 
 ## HackerRamp feed 
 Snap your latest fashion finds and post yout recent shopping experiences complemented with a non-stop diet of the latest looks and trends with a friend list to share. We have authenticated users in the application by storing the password of the users in the database since, it is never recommended to store plain text passwords as they can be compromised easily. So, bcrypt library has been utilised to hash the passwords before they are saved.
-![](public/img/slider/slider2.jpg/MVC.png)
+![](public/img/slider/slider2.jpg)
 
 ## Theme based Events
 Shop and snap for a cause! For the backend side, Express library has been used on top of Nodejs. MongoDB has been used as the NoSQL database to store data as documents in JSON format and  employed mongoose to connect to MongoDB database.
-![](public/img/slider/slider1.jpg/MVC.png)
+![](public/img/slider/slider1.jpg)
 
 ## Solution Deep Dive
 We have used the MVC (The Model View Controller) architectural pattern which separates concerns into one of 3 buckets so that we can work better as a team. Making independent models and views makes code organization simple and easy to understand and keeps maintenance easier.
