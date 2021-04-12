@@ -12,6 +12,7 @@ Shop and snap for a cause! For the backend side, Express library has been used o
 
 ## Solution Deep Dive
 We have used the MVC (The Model View Controller) architectural pattern which separates concerns into one of 3 buckets so that we can work better as a team. Making independent models and views makes code organization simple and easy to understand and keeps maintenance easier.
+![](ImagesReadme/MVC.png)
 
 ## Theme based Squad Room
 Shop with your squad! No worries of staying miles away. Shop for an urgent event with style.
