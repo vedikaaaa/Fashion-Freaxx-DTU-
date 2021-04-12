@@ -27,7 +27,7 @@ Find all your memories at one place!! The images are fetched by the embedded jav
 ## Squad - Cart 
 Shop for your friends and take their feedback!! The is to enable users to take advantage of a discount, or just to cut down on shipping costs  like in offline shopping as it's super easy and intuitive to share your shopping experience with your friends or family, and moreover, to save money. 
 
-
+## Next Phase
 Excited to make the room's privacy editable and increase the collaborative experience, extending it beyond the comforts of offline shopping!
 Next in the rooms we'll have self designing feature so that members can express what they have in mind to shop!
 We still have a LOT to work on this prototype, we are excited to enable other features in the room and feed, improve the UI and make it more user friendly to make this even more meaningful and innovative. 
